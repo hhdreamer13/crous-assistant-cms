@@ -1,27 +1,32 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const BourseNationalité = () => {
-  const constitutionSteps = [
+const RessourcesÉtudiant = () => {
+  const situationÉtudiant = [
     {
       id: 1,
-      name: "Étudiant français",
-      link: "bourse/constitution/nationalité/français",
+      name: "ASE",
+      link: "bourse/instruction/ressources-étudiant/ase",
     },
     {
       id: 2,
-      name: "Étudiant européen",
-      link: "bourse/constitution/nationalité/européen",
+      name: "Réfugié",
+      link: "bourse/instruction/ressources-étudiant/réfugié",
     },
     {
       id: 3,
-      name: "Étudiant hors Europe",
-      link: "bourse/constitution/nationalité/hors-europe",
+      name: "Orphelin de ses deux parents",
+      link: "bourse/instruction/ressources-étudiant/orphelin",
     },
     {
       id: 4,
-      name: "Étudiant Nouvelle-Calédonie / Polynésie française/ Saint-Martin",
-      link: "bourse/constitution/nationalité/autres",
+      name: "Étudiant avec enfant",
+      link: "bourse/instruction/ressources-étudiant/avec-enfant",
+    },
+    {
+      id: 5,
+      name: "Étudiant marié ou pacsé",
+      link: "bourse/instruction/ressources-étudiant/étudiant-marié",
     },
   ];
   return (
@@ -31,7 +36,7 @@ const BourseNationalité = () => {
           Selectionnez le service de votre demande :
         </p>
         <ul>
-          {constitutionSteps.map(({ id, name, link }) => {
+          {situationÉtudiant.map(({ id, name, link }) => {
             return (
               <motion.li
                 key={id}
@@ -51,4 +56,4 @@ const BourseNationalité = () => {
   );
 };
 
-export default BourseNationalité;
+export default RessourcesÉtudiant;

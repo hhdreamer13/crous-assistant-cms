@@ -45,7 +45,7 @@ const Header = () => {
             </h2>
           </Link>
         </div>
-        <div>
+        <div className="hidden md:flex">
           <button className="btn-ghost btn mx-2">Bourse</button>
           <button className="btn-ghost btn mx-2">Logement</button>
           <button className="btn-ghost btn mx-2">Social</button>

@@ -1,32 +1,37 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Bourse = () => {
-  const bourseSteps = [
+const BourseInstruction = () => {
+  const instructionSteps = [
     {
       id: 1,
-      name: "La constitution du DSE",
-      link: "bourse/constitution",
+      name: "Justificatifs de ressources - Parents",
+      link: "bourse/instruction/ressources-parents",
     },
     {
       id: 2,
-      name: "L'instruction du DSE",
-      link: "bourse/instruction",
+      name: "Justificatifs de ressources - Étudiant",
+      link: "bourse/instruction/ressources-étudiant",
     },
     {
       id: 3,
-      name: "Le paiement de la DSE",
-      link: "bourse/paiement",
+      name: "Points de charge - Fratrie",
+      link: "bourse/instruction/points-fratrie",
     },
     {
       id: 4,
-      name: "ECTS",
-      link: "bourse/ects",
+      name: "Points de charge - Distance",
+      link: "bourse/instruction/points-distance",
     },
     {
       id: 5,
-      name: "Les aides complémentaires",
-      link: "bourse/complémentaires",
+      name: "Modification de vœu",
+      link: "bourse/instruction/voeu",
+    },
+    {
+      id: 6,
+      name: "Notification conditionelle",
+      link: "bourse/instruction/notification-conditionelle",
     },
   ];
   return (
@@ -36,16 +41,12 @@ const Bourse = () => {
           Selectionnez le service de votre demande :
         </p>
         <ul>
-          {bourseSteps.map(({ id, name, link }) => {
+          {instructionSteps.map(({ id, name, link }) => {
             return (
               <motion.li
                 key={id}
                 className="my-3 py-2"
-                whileHover={{
-                  scale: 1.3,
-                  color: "#f87171",
-                  originX: 0,
-                }}
+                whileHover={{ scale: 1.3, color: "#f87171", originX: 0 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Link to={`/${link}`}>
@@ -60,4 +61,4 @@ const Bourse = () => {
   );
 };
 
-export default Bourse;
+export default BourseInstruction;

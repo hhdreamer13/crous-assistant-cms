@@ -1,32 +1,27 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Bourse = () => {
-  const bourseSteps = [
+const BourseNationalité = () => {
+  const nationalitéÉtudiant = [
     {
       id: 1,
-      name: "La constitution du DSE",
-      link: "bourse/constitution",
+      name: "Étudiant français",
+      link: "bourse/constitution/nationalité/français",
     },
     {
       id: 2,
-      name: "L'instruction du DSE",
-      link: "bourse/instruction",
+      name: "Étudiant européen",
+      link: "bourse/constitution/nationalité/européen",
     },
     {
       id: 3,
-      name: "Le paiement de la DSE",
-      link: "bourse/paiement",
+      name: "Étudiant hors-Europe",
+      link: "bourse/constitution/nationalité/hors-europe",
     },
     {
       id: 4,
-      name: "ECTS",
-      link: "bourse/ects",
-    },
-    {
-      id: 5,
-      name: "Les aides complémentaires",
-      link: "bourse/complémentaires",
+      name: "Étudiant Nouvelle-Calédonie / Polynésie française/ Saint-Martin",
+      link: "bourse/constitution/nationalité/autres",
     },
   ];
   return (
@@ -36,16 +31,12 @@ const Bourse = () => {
           Selectionnez le service de votre demande :
         </p>
         <ul>
-          {bourseSteps.map(({ id, name, link }) => {
+          {nationalitéÉtudiant.map(({ id, name, link }) => {
             return (
               <motion.li
                 key={id}
                 className="my-3 py-2"
-                whileHover={{
-                  scale: 1.3,
-                  color: "#f87171",
-                  originX: 0,
-                }}
+                whileHover={{ scale: 1.3, color: "#f87171", originX: 0 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Link to={`/${link}`}>
@@ -60,4 +51,4 @@ const Bourse = () => {
   );
 };
 
-export default Bourse;
+export default BourseNationalité;

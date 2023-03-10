@@ -1,37 +1,32 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const RessourcesParents = () => {
-  const situationParents = [
+const BourseComplémentaires = () => {
+  const aidesComplémentaires = [
     {
       id: 1,
-      name: "Parents mariés / pacsés / concubins ",
-      link: "bourse/instruction/ressources-parents/mariés",
+      name: "Aide au Mérite Nationale",
+      link: "bourse/complémentaires/bm-nationale",
     },
     {
       id: 2,
-      name: "Parents divorcés / séparés",
-      link: "bourse/instruction/ressources-parents/séparés",
+      name: "Aide au Mérite Régionale",
+      link: "bourse/complémentaires/bm-régionale",
     },
     {
       id: 3,
-      name: "Parent isolé",
-      link: "bourse/instruction/ressources-parents/isolé",
+      name: "Complément Grandes Vacances",
+      link: "bourse/complémentaires/cgv",
     },
     {
       id: 4,
-      name: "Parent remarié",
-      link: "bourse/instruction/ressources-parents/remarié",
+      name: "Aide à la Mobilité Parcoursup",
+      link: "bourse/complémentaires/amp",
     },
     {
       id: 5,
-      name: "Parent inconnu",
-      link: "bourse/instruction/ressources-parents/inconnu",
-    },
-    {
-      id: 6,
-      name: "Parent décédé",
-      link: "bourse/instruction/ressources-parents/décédé",
+      name: "Aide à la Mobilité Master",
+      link: "bourse/complémentaires/amm",
     },
   ];
   return (
@@ -41,7 +36,7 @@ const RessourcesParents = () => {
           Selectionnez le service de votre demande :
         </p>
         <ul>
-          {situationParents.map(({ id, name, link }) => {
+          {aidesComplémentaires.map(({ id, name, link }) => {
             return (
               <motion.li
                 key={id}
@@ -61,4 +56,4 @@ const RessourcesParents = () => {
   );
 };
 
-export default RessourcesParents;
+export default BourseComplémentaires;

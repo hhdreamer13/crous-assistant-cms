@@ -1,22 +1,34 @@
 import { Route } from "react-router-dom";
 import BoursePahses from "../BourseCategory/BourseConstitutionCategory/BoursePhases/BoursePhases";
 import BourseCritères from "../BourseCategory/BourseConstitutionCategory/BourseCritères/BourseCritères";
+
 import BourseConstitution from "../BourseCategory/BourseConstitutionCategory/BourseConstitution/BourseConstitution";
 import BourseNationalité from "../BourseCategory/BourseConstitutionCategory/BourseNationalité/BourseNationalité";
 import NationalitéDetails from "../BourseCategory/BourseConstitutionCategory/BourseNationalité/NationalitéDetails";
+
 import BourseInstruction from "../BourseCategory/BourseInstructionCategory/BourseInstruction/BourseInstruction";
 import RessourcesÉtudiant from "../BourseCategory/BourseInstructionCategory/RessourcesÉtudiant/RessourcesÉtudiant";
 import RessourcesÉtudiantDetails from "../BourseCategory/BourseInstructionCategory/RessourcesÉtudiant/RessourcesÉtudiantDetails";
+import RessourcesParents from "../BourseCategory/BourseInstructionCategory/RessourcesParents/RessourcesParents";
+import RessourcesParentsDetails from "../BourseCategory/BourseInstructionCategory/RessourcesParents/RessourcesParentsDetails";
+
 import PointsFratrie from "../BourseCategory/BourseInstructionCategory/PointsFratrie/PointsFratrie";
 import PointsDistance from "../BourseCategory/BourseInstructionCategory/PointsDistance/PointsDistance";
 import ModificationVoeu from "../BourseCategory/BourseInstructionCategory/ModificationVoeu/PointsDistance";
 import NotificationConditionelle from "../BourseCategory/BourseInstructionCategory/NotificationConditionelle/NotificationConditionelle";
+
 import BoursePaiement from "../BourseCategory/BoursePaiementCategory/BoursePaiement/BoursePaiement";
 import NotificationDéfinitive from "../BourseCategory/BoursePaiementCategory/NotificationDéfinitive/NotificationDéfinitive";
 import BourseRévision from "../BourseCategory/BoursePaiementCategory/BourseRévision/BourseRévision";
 import BourseRévisionDetails from "../BourseCategory/BoursePaiementCategory/BourseRévision/BourseRévisionDetails";
 import BourseRecours from "../BourseCategory/BoursePaiementCategory/BourseRecours/BourseRecours";
 import BourseRecoursDetails from "../BourseCategory/BoursePaiementCategory/BourseRecours/BourseRecoursDetails";
+import ConsielEurope from "../BourseCategory/BoursePaiementCategory/ConseilEurope/ConsielEurope";
+import RefusSuspension from "../BourseCategory/BoursePaiementCategory/RefusSuspension/RefusSuspension";
+
+import BourseEcts from "../BourseCategory/BourseEcts/BourseEcts";
+import BourseComplémentaires from "../BourseCategory/BourseComplémentaires/BourseComplémentaires";
+import BourseComplémentairesDetails from "../BourseCategory/BourseComplémentaires/BourseComplémentairesDetails";
 
 export default [
   <Route
@@ -58,6 +70,16 @@ export default [
     key="ressources-etudiant-details"
     path="/bourse/instruction/ressources-étudiant/:name"
     element={<RessourcesÉtudiantDetails />}
+  />,
+  <Route
+    key="ressources-parents"
+    path="/bourse/instruction/ressources-parents"
+    element={<RessourcesParents />}
+  />,
+  <Route
+    key="ressources-parents-details"
+    path="/bourse/instruction/ressources-parents/:name"
+    element={<RessourcesParentsDetails />}
   />,
   <Route
     key="points-fratrie"
@@ -104,5 +126,26 @@ export default [
     key="recours"
     path="/bourse/paiement/recours/:name"
     element={<BourseRecoursDetails />}
+  />,
+  <Route
+    key="conseil-europe"
+    path="/bourse/paiement/conseil-europe"
+    element={<ConsielEurope />}
+  />,
+  <Route
+    key="refus-suspension"
+    path="/bourse/paiement/refus-suspension"
+    element={<RefusSuspension />}
+  />,
+  <Route key="ects" path="/bourse/ects" element={<BourseEcts />} />,
+  <Route
+    key="complémentaires"
+    path="/bourse/complémentaires"
+    element={<BourseComplémentaires />}
+  />,
+  <Route
+    key="ressources-parents-details"
+    path="/bourse/complémentaires/:name"
+    element={<BourseComplémentairesDetails />}
   />,
 ];

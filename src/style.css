@@ -12,6 +12,8 @@ body {
 h3,
 h4,
 p,
-li {
+li,
+button,
+Link {
   @apply font-['Quicksand'] drop-shadow-md;
 }

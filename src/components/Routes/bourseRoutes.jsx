@@ -137,7 +137,7 @@ export default [
     path="/bourse/paiement/refus-suspension"
     element={<RefusSuspension />}
   />,
-  <Route key="ects" path="/bourse/ects" element={<BourseEcts />} />,
+  <Route key="ects" path="/bourse/paiement/ects" element={<BourseEcts />} />,
   <Route
     key="complémentaires"
     path="/bourse/complémentaires"

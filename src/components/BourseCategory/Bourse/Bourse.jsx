@@ -20,11 +20,6 @@ const Bourse = () => {
     },
     {
       id: 4,
-      name: "ECTS",
-      link: "bourse/ects",
-    },
-    {
-      id: 5,
       name: "Les aides complémentaires",
       link: "bourse/complémentaires",
     },

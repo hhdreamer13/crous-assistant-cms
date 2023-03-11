@@ -15,6 +15,11 @@ const BoursePaiement = () => {
     },
     {
       id: 3,
+      name: "ECTS",
+      link: "bourse/constitution/ects",
+    },
+    {
+      id: 3,
       name: "Refus et suspension de la bourse",
       link: "bourse/paiement/refus-suspension",
     },

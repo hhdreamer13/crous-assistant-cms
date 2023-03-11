@@ -1,5 +1,5 @@
 import { Route } from "react-router-dom";
-import BoursePahses from "../BourseCategory/BourseConstitutionCategory/BoursePhases/BoursePhases";
+import BoursePhases from "../BourseCategory/BourseConstitutionCategory/BoursePhases/BoursePhases";
 import BourseCritères from "../BourseCategory/BourseConstitutionCategory/BourseCritères/BourseCritères";
 
 import BourseConstitution from "../BourseCategory/BourseConstitutionCategory/BourseConstitution/BourseConstitution";
@@ -15,7 +15,7 @@ import RessourcesParentsDetails from "../BourseCategory/BourseInstructionCategor
 import PointsFratrie from "../BourseCategory/BourseInstructionCategory/PointsFratrie/PointsFratrie";
 import PointsDistance from "../BourseCategory/BourseInstructionCategory/PointsDistance/PointsDistance";
 import ModificationVoeu from "../BourseCategory/BourseInstructionCategory/ModificationVoeu/PointsDistance";
-import NotificationConditionelle from "../BourseCategory/BourseInstructionCategory/NotificationConditionelle/NotificationConditionelle";
+import NotificationConditionnelle from "../BourseCategory/BourseInstructionCategory/NotificationConditionnelle/NotificationConditionnelle";
 
 import BoursePaiement from "../BourseCategory/BoursePaiementCategory/BoursePaiement/BoursePaiement";
 import NotificationDéfinitive from "../BourseCategory/BoursePaiementCategory/NotificationDéfinitive/NotificationDéfinitive";
@@ -23,7 +23,7 @@ import BourseRévision from "../BourseCategory/BoursePaiementCategory/BourseRév
 import BourseRévisionDetails from "../BourseCategory/BoursePaiementCategory/BourseRévision/BourseRévisionDetails";
 import BourseRecours from "../BourseCategory/BoursePaiementCategory/BourseRecours/BourseRecours";
 import BourseRecoursDetails from "../BourseCategory/BoursePaiementCategory/BourseRecours/BourseRecoursDetails";
-import ConsielEurope from "../BourseCategory/BoursePaiementCategory/ConseilEurope/ConsielEurope";
+import ConseilEurope from "../BourseCategory/BoursePaiementCategory/ConseilEurope/ConseilEurope";
 import RefusSuspension from "../BourseCategory/BoursePaiementCategory/RefusSuspension/RefusSuspension";
 
 import BourseEcts from "../BourseCategory/BourseEcts/BourseEcts";
@@ -39,7 +39,7 @@ export default [
   <Route
     key="phases"
     path="/bourse/constitution/phases"
-    element={<BoursePahses />}
+    element={<BoursePhases />}
   />,
   <Route
     key="critères"
@@ -97,9 +97,9 @@ export default [
     element={<ModificationVoeu />}
   />,
   <Route
-    key="notification-conditionelle"
-    path="/bourse/instruction/notification-conditionelle"
-    element={<NotificationConditionelle />}
+    key="notification-conditionnelle"
+    path="/bourse/instruction/notification-conditionnelle"
+    element={<NotificationConditionnelle />}
   />,
   <Route key="paiement" path="/bourse/paiement" element={<BoursePaiement />} />,
   <Route
@@ -130,7 +130,7 @@ export default [
   <Route
     key="conseil-europe"
     path="/bourse/paiement/conseil-europe"
-    element={<ConsielEurope />}
+    element={<ConseilEurope />}
   />,
   <Route
     key="refus-suspension"

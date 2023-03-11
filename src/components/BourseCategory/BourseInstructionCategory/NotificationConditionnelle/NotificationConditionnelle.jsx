@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-const NotificationConditionelle = () => {
+const NotificationConditionnelle = () => {
   return (
     <div className="prose mx-auto mt-20 h-fit w-3/4 text-slate-50">
-      <h3>Notification Conditionelle</h3>
+      <h3>Notification Conditionnelle</h3>
       <p>
         Après étude et validation du dossier, le Crous envoie par e-mail une
         réponse de principe indiquant l’échelon de bourse. Cette notification
@@ -16,4 +16,4 @@ const NotificationConditionelle = () => {
   );
 };
 
-export default NotificationConditionelle;
+export default NotificationConditionnelle;

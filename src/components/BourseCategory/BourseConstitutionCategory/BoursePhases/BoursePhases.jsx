@@ -1,4 +1,4 @@
-const BoursePahses = () => {
+const BoursePhases = () => {
   const phases = [
     {
       id: 1,
@@ -38,4 +38,4 @@ const BoursePahses = () => {
   );
 };
 
-export default BoursePahses;
+export default BoursePhases;

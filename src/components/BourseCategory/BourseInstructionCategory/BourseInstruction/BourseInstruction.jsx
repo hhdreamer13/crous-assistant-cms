@@ -30,8 +30,8 @@ const BourseInstruction = () => {
     },
     {
       id: 6,
-      name: "Notification conditionelle",
-      link: "bourse/instruction/notification-conditionelle",
+      name: "Notification conditionnelle",
+      link: "bourse/instruction/notification-conditionnelle",
     },
   ];
   return (

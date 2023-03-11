@@ -28,7 +28,7 @@ const BourseNationalité = () => {
     <div className="">
       <div className="mx-auto mt-20 flex h-fit w-fit flex-col items-start p-2 text-lg text-slate-50">
         <p className="my-10 text-2xl">
-          Selectionnez le service de votre demande :
+          Sélectionner l&apos;option qui vous convient :
         </p>
         <ul>
           {nationalitéÉtudiant.map(({ id, name, link }) => {

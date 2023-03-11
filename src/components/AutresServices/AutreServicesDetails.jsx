@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import TextTemplate from "../common/TextTemplate";
 
 const AutreServicesDetails = () => {
   const data = [
@@ -8,7 +9,7 @@ const AutreServicesDetails = () => {
       paragraphs: [
         {
           id: 1,
-          title: "Les étudiants boursiers",
+          title: `🔸 Les étudiants boursiers`,
           text: "Seuls les étudiants relevant des catégories suivantes sont éligibles à ce tarif :",
           bullets: [
             "Être boursier sur critères sociaux (BCS) ou bénéficiaires de l’aide spécifique allocation annuelle (ASAA) des Crous de Paris, Créteil ou Versailles pour l'année universitaire en cours.",
@@ -29,7 +30,7 @@ const AutreServicesDetails = () => {
         },
         {
           id: 3,
-          title: "Les étudiants non-boursiers",
+          title: `🔸 Les étudiants non-boursiers`,
           text: `Le tarif à 1€ peut être accordé aux étudiants en situation de précarité, même s’ils ne sont pas boursiers, après une évaluation sociale.
 
           Cette situation doit être attestée par les pièces justificatives demandées. Après étude du dossier, l’étudiant recevra une réponse du service social. Si la demande est acceptée l’étudiant sera identifié comme bénéficiaire via son compte Izly.
@@ -40,7 +41,7 @@ const AutreServicesDetails = () => {
         },
         {
           id: 4,
-          title: "Assistance Izly",
+          title: "🔸 Assistance Izly",
           text: "Les contacts avec le service Izly se feront via le Crous de gestion de l’étudiant.",
           bullets: [
             "assistance-izly@crous-paris.fr",
@@ -50,7 +51,7 @@ const AutreServicesDetails = () => {
         },
         {
           id: 5,
-          title: "Guichet Izly",
+          title: "🔸 Guichet Izly",
           text: "Pour les étudiants de Paris uniquement, il y a 5 guichets pour activer leur compte ou demander une carte Izly:",
           bullets: [
             "RU Mabillon : ouvert de 11h30 à 14h30",
@@ -62,7 +63,7 @@ const AutreServicesDetails = () => {
         },
         {
           id: 6,
-          title: "Changement d'académie",
+          title: "🔸 Changement d'académie",
           text: "Pour les étudiants changeant d’académie en cours d’année, cela ne devra pas poser de problème. En effet l’application étant gérée par le Cnous, l’étudiant pourra bénéficier du tarif à 1 euro dans toute la France.",
           bullets: [],
         },
@@ -265,25 +266,6 @@ Autrement, une fois, avoir vérifié que l’étudiant n’a pas de dossier pour
   const { name } = useParams();
   const [autreSection] = data.filter(({ keyword }) => keyword === name);
 
-  return (
-    <div className="prose mx-auto mt-10 flex w-3/4 flex-col items-start pb-12 text-slate-50">
-      <h3>{autreSection.title}</h3>
-
-      {autreSection.paragraphs.map(({ id, title, text, bullets }) => {
-        return (
-          <div key={id}>
-            <h4>{title}</h4>
-            <p className="whitespace-pre-line text-justify">{text}</p>
-            <ul>
-              {bullets &&
-                bullets.map((bullet, i) => {
-                  return <li key={i}>{bullet}</li>;
-                })}
-            </ul>
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <TextTemplate content={autreSection} />;
 };
 export default AutreServicesDetails;

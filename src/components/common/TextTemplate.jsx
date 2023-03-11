@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const SelectionMenu = ({ items }) => {
+const TextTemplate = ({ content }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="mt-6 flex w-full items-start justify-center pb-20">
-      <div className="relative flex h-fit w-fit flex-col items-start p-2 text-lg text-slate-50">
+    <div className="">
+      <div className="prose relative mx-auto mt-10 flex h-auto w-3/4 flex-row items-start pb-12 text-slate-50">
         <motion.button
+          className="absolute -left-14 top-1"
           whileHover={{ scale: 1.3, color: "#f87171", originX: "center" }}
-          className="absolute -left-10 mt-11"
           onClick={() => navigate(-1)}
         >
           <svg
-            width="23px"
-            height="23px"
+            width="24px"
+            height="24px"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -43,28 +43,26 @@ const SelectionMenu = ({ items }) => {
             />
           </svg>
         </motion.button>
-        <p className="my-10 text-2xl">
-          Sélectionner l&apos;option qui vous convient :
-        </p>
-        <ul>
-          {items.map(({ id, name, link }) => {
+        <div className="flex flex-col">
+          <h2 className="mt-0">{content.title}</h2>
+          {content.paragraphs.map(({ id, title, text, bullets }) => {
             return (
-              <motion.li
-                key={id}
-                className="my-3 py-2"
-                whileHover={{ scale: 1.3, color: "#f87171", originX: 0 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Link to={`/${link}`}>
-                  <button className="">{name}</button>
-                </Link>
-              </motion.li>
+              <div key={id}>
+                <h3>{title}</h3>
+                <p className="whitespace-pre-line text-justify">{text}</p>
+                <ul>
+                  {bullets &&
+                    bullets.map((bullet, i) => {
+                      return <li key={i}>{bullet}</li>;
+                    })}
+                </ul>
+              </div>
             );
           })}
-        </ul>
+        </div>
       </div>
     </div>
   );
 };
 
-export default SelectionMenu;
+export default TextTemplate;

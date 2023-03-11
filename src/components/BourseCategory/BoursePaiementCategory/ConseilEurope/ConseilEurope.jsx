@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-const ConsielEurope = () => {
+const ConseilEurope = () => {
   return (
     <div className="prose mx-auto mt-20 h-fit w-3/4 pb-12 text-slate-50">
       <h3>Étudiant dans un pays membre du Conseil de l’Europe</h3>
@@ -75,4 +75,4 @@ const ConsielEurope = () => {
   );
 };
 
-export default ConsielEurope;
+export default ConseilEurope;

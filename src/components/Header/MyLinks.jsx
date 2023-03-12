@@ -26,11 +26,11 @@ export const links = [
         sublink: [
           {
             name: "Revenus - Parents",
-            link: "/bourse/instruction/ressources-parents",
+            link: "/bourse/instruction/ressources/parents",
           },
           {
             name: "Revenus - Étudiant",
-            link: "/bourse/instruction/ressources-étudiant",
+            link: "/bourse/instruction/ressources/étudiant",
           },
           {
             name: "Fratrie (pts)",

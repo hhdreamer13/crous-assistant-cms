@@ -33,12 +33,12 @@ const BourseCategoryDetails = () => {
         {
           id: 1,
           name: "Justificatifs de ressources - Parents",
-          link: "bourse/instruction/ressources-parents",
+          link: "bourse/instruction/ressources/parents",
         },
         {
           id: 2,
           name: "Justificatifs de ressources - Étudiant",
-          link: "bourse/instruction/ressources-étudiant",
+          link: "bourse/instruction/ressources/étudiant",
         },
         {
           id: 3,

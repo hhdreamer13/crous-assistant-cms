@@ -15,7 +15,7 @@ const TextTemplate = ({ content }) => {
     <div className="">
       <div className="prose relative mx-auto mt-10 flex h-auto w-3/4 flex-row items-start pb-12 text-slate-50">
         <motion.button
-          className="absolute -left-14 top-1"
+          className="absolute -left-14 top-1 hidden md:block"
           whileHover={{ scale: 1.3, color: "#f87171", originX: "center" }}
           onClick={() => navigate(-1)}
         >

@@ -53,7 +53,11 @@ const TextTemplate = ({ content }) => {
                 <ul>
                   {bullets &&
                     bullets.map((bullet, i) => {
-                      return <li key={i}>{bullet}</li>;
+                      return (
+                        <li className="whitespace-pre-line" key={i}>
+                          {bullet}
+                        </li>
+                      );
                     })}
                 </ul>
               </div>

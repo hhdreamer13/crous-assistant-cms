@@ -5,57 +5,57 @@ const BourseRévision = () => {
     {
       id: 1,
       name: "Maladie",
-      link: "bourse/paiement/révision/maladie",
+      link: "bourse/paiement/révision/révision-détails/maladie",
     },
     {
       id: 2,
       name: "Chômage",
-      link: "bourse/paiement/révision/chômage",
+      link: "bourse/paiement/révision/révision-détails/chômage",
     },
     {
       id: 3,
       name: "Divorce",
-      link: "bourse/paiement/révision/divorce",
+      link: "bourse/paiement/révision/révision-détails/divorce",
     },
     {
       id: 4,
       name: "Décès",
-      link: "bourse/paiement/révision/décès",
+      link: "bourse/paiement/révision/révision-détails/décès",
     },
     {
       id: 5,
       name: "Retraite : pour le privé",
-      link: "bourse/paiement/révision/retraite-privé",
+      link: "bourse/paiement/révision/révision-détails/retraite-privé",
     },
     {
       id: 6,
       name: "Retraite : pour la fonction publique",
-      link: "bourse/paiement/révision/retraite-publique",
+      link: "bourse/paiement/révision/révision-détails/retraite-publique",
     },
     {
       id: 7,
       name: "Surendettement",
-      link: "bourse/paiement/révision/surendettement",
+      link: "bourse/paiement/révision/révision-détails/surendettement",
     },
     {
       id: 8,
       name: "Redressement judiciaire ou liquidation judiciaire",
-      link: "bourse/paiement/révision/redressement",
+      link: "bourse/paiement/révision/révision-détails/redressement",
     },
     {
       id: 9,
       name: "Réduction du temps de travail",
-      link: "bourse/paiement/révision/réduction",
+      link: "bourse/paiement/révision/révision-détails/réduction",
     },
     {
       id: 10,
       name: "Congés sans traitement, sans solde ou parental",
-      link: "bourse/paiement/révision/congés",
+      link: "bourse/paiement/révision/révision-détails/congés",
     },
     {
       id: 11,
       name: "Mise en disponibilité",
-      link: "bourse/paiement/révision/disponibilité",
+      link: "bourse/paiement/révision/révision-détails/disponibilité",
     },
   ];
   return <SelectionMenu items={data} />;

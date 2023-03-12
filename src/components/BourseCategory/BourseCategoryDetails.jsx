@@ -80,7 +80,7 @@ const BourseCategoryDetails = () => {
         {
           id: 3,
           name: "ECTS",
-          link: "bourse/constitution/ects",
+          link: "bourse/paiement/ects",
         },
         {
           id: 3,
@@ -90,12 +90,12 @@ const BourseCategoryDetails = () => {
         {
           id: 4,
           name: "Révision",
-          link: "bourse/paiement/révision",
+          link: "bourse/paiement/révision/révision-détails",
         },
         {
           id: 5,
           name: "Recours",
-          link: "bourse/paiement/recours",
+          link: "bourse/paiement/recours/recours-détails",
         },
       ],
     },

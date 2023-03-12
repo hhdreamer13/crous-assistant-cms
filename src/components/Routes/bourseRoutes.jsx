@@ -6,15 +6,11 @@ import NationalitéDetails from "../BourseCategory/BourseConstitutionCategory/Bo
 import RessourcesÉtudiantDetails from "../BourseCategory/BourseInstructionCategory/BourseRessources/RessourcesÉtudiantDetails";
 import RessourcesParentsDetails from "../BourseCategory/BourseInstructionCategory/BourseRessources/RessourcesParentsDetails";
 
-import NotificationDéfinitive from "../BourseCategory/BoursePaiementCategory/NotificationDéfinitive/NotificationDéfinitive";
 import BourseRévision from "../BourseCategory/BoursePaiementCategory/BourseRévision/BourseRévision";
 import BourseRévisionDetails from "../BourseCategory/BoursePaiementCategory/BourseRévision/BourseRévisionDetails";
 import BourseRecours from "../BourseCategory/BoursePaiementCategory/BourseRecours/BourseRecours";
 import BourseRecoursDetails from "../BourseCategory/BoursePaiementCategory/BourseRecours/BourseRecoursDetails";
-import ConseilEurope from "../BourseCategory/BoursePaiementCategory/ConseilEurope/ConseilEurope";
-import RefusSuspension from "../BourseCategory/BoursePaiementCategory/RefusSuspension/RefusSuspension";
 
-import BourseEcts from "../BourseCategory/BoursePaiementCategory/BourseEcts/BourseEcts";
 import BourseComplémentairesDetails from "../BourseCategory/BourseComplémentaires/BourseComplémentairesDetails";
 
 import BourseCategoryDetails from "../BourseCategory/BourseCategoryDetails";
@@ -22,6 +18,7 @@ import BourseRessources from "../BourseCategory/BourseInstructionCategory/Bourse
 import BourseConstitutionDetails from "../BourseCategory/BourseConstitutionCategory/BourseConstitutionDetails";
 
 import BourseInstructionCategoryDetails from "../BourseCategory/BourseInstructionCategory/BourseInstructionCategoryDetails";
+import BoursePaiementCategoryDetails from "../BourseCategory/BoursePaiementCategory/BoursePaiementCategoryDetails";
 
 export default [
   <Route
@@ -65,41 +62,30 @@ export default [
     element={<RessourcesParentsDetails />}
   />,
   <Route
-    key="notification-définitive"
-    path="/bourse/paiement/notification-définitive"
-    element={<NotificationDéfinitive />}
+    key="bourse-paiement"
+    path="/bourse/paiement/:name"
+    element={<BoursePaiementCategoryDetails />}
   />,
   <Route
     key="révision"
-    path="/bourse/paiement/révision"
+    path="/bourse/paiement/révision/révision-détails"
     element={<BourseRévision />}
   />,
   <Route
     key="révision-details"
-    path="/bourse/paiement/révision/:name"
+    path="/bourse/paiement/révision/révision-détails/:name"
     element={<BourseRévisionDetails />}
   />,
   <Route
     key="recours"
-    path="/bourse/paiement/recours"
+    path="/bourse/paiement/recours/recours-détails"
     element={<BourseRecours />}
   />,
   <Route
     key="recours"
-    path="/bourse/paiement/recours/:name"
+    path="/bourse/paiement/recours/recours-détails/:name"
     element={<BourseRecoursDetails />}
   />,
-  <Route
-    key="conseil-europe"
-    path="/bourse/paiement/conseil-europe"
-    element={<ConseilEurope />}
-  />,
-  <Route
-    key="refus-suspension"
-    path="/bourse/paiement/refus-suspension"
-    element={<RefusSuspension />}
-  />,
-  <Route key="ects" path="/bourse/paiement/ects" element={<BourseEcts />} />,
   <Route
     key="ressources-parents-details"
     path="/bourse/complémentaires/:name"

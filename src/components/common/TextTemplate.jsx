@@ -1,8 +1,15 @@
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const TextTemplate = ({ content }) => {
   const navigate = useNavigate();
+
+  // Scroll to a section
+  const handleMenuClick = (e) => {
+    const position = document.getElementById(e.target.text);
+    console.log(e.target.text.toLowerCase(), position);
+    position && position.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <div className="">
@@ -43,12 +50,31 @@ const TextTemplate = ({ content }) => {
             />
           </svg>
         </motion.button>
+        <div className="absolute -left-64 top-20 hidden w-56 rounded-2xl bg-slate-300 bg-opacity-25 xl:block">
+          {content.paragraphs.map(({ title, id }) => {
+            return (
+              <ul key={id} className="text-sky-900">
+                {title && (
+                  <li className="px-1">
+                    <Link
+                      to={{ hash: `#${title.toLowerCase()}` }}
+                      className="no-underline"
+                      onClick={(e) => handleMenuClick(e)}
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            );
+          })}
+        </div>
         <div className="flex flex-col">
           <h2 className="mt-0">{content.title}</h2>
           {content.paragraphs.map(({ id, title, text, bullets }) => {
             return (
               <div key={id}>
-                <h3>{title}</h3>
+                <h3 id={title}>{title}</h3>
                 <p className="whitespace-pre-line text-justify">{text}</p>
                 <ul>
                   {bullets &&

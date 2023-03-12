@@ -52,7 +52,6 @@ const BourseConstitutionDetails = () => {
     },
   ];
   const { name } = useParams();
-  console.log(name);
   const [content] = data.filter(({ keyword }) => keyword === name);
 
   return <TextTemplate content={content} />;

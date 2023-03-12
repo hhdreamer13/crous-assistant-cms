@@ -136,15 +136,16 @@ const CrousServicesDetails = () => {
           name: "Faire un Ticket",
           link: "autre/ticket",
         },
-        // {
-        //   id: 4,
-        //   name: "Cumul avec la bourse",
-        //   link: "autre/cumul",
-        // },
+
+        {
+          id: 4,
+          name: "Mail type",
+          link: "autre/mail",
+        },
         // {
         //   id: 5,
-        //   name: "Mail type",
-        //   link: "autre/mail",
+        //   name: "Cumul avec la bourse",
+        //   link: "autre/cumul",
         // },
       ],
     },

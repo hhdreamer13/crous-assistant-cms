@@ -50,25 +50,27 @@ const TextTemplate = ({ content }) => {
             />
           </svg>
         </motion.button>
-        <div className="absolute -left-64 top-20 hidden w-56 rounded-2xl bg-slate-300 bg-opacity-25 xl:block">
-          {content.paragraphs.map(({ title, id }) => {
-            return (
-              <ul key={id} className="text-sky-900">
-                {title && (
-                  <li className="px-1">
-                    <Link
-                      to={{ hash: `#${title.toLowerCase()}` }}
-                      className="no-underline"
-                      onClick={(e) => handleMenuClick(e)}
-                    >
-                      {title}
-                    </Link>
-                  </li>
-                )}
-              </ul>
-            );
-          })}
-        </div>
+        {content.paragraphs.some((item) => item.title) && (
+          <div className="absolute -left-64 top-20 hidden w-56 rounded-2xl bg-slate-300 bg-opacity-25 xl:block">
+            {content.paragraphs.map(({ title, id }) => {
+              return (
+                <ul key={id} className="text-sky-900">
+                  {title && (
+                    <li className="px-1">
+                      <Link
+                        to={{ hash: `#${title.toLowerCase()}` }}
+                        className="no-underline"
+                        onClick={(e) => handleMenuClick(e)}
+                      >
+                        {title}
+                      </Link>
+                    </li>
+                  )}
+                </ul>
+              );
+            })}
+          </div>
+        )}
         <div className="flex flex-col">
           <h2 className="mt-0">{content.title}</h2>
           {content.paragraphs.map(({ id, title, text, bullets }) => {

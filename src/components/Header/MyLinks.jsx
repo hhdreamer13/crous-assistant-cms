@@ -157,6 +157,7 @@ export const links = [
           { name: "IZLY", link: "/autre/izly" },
           { name: "Informations générales", link: "/autre/info" },
           { name: "Faire un Ticket", link: "/autre/ticket" },
+          { name: "Mail type", link: "/autre/mail" },
         ],
       },
     ],

@@ -7,10 +7,19 @@ export const data = [
         id: 1,
         title: "Le service social de Crous",
         text: `Les services sociaux gèrent les aides d’urgence (ASAA et ASAP), l’accompagnement des étudiants en urgence sociale et les notes de rupture familiale (en cas d’absence d’un des parents de l’étudiant). Le dossier de l’étudiant est présenté de façon anonyme à la commission. Si nécessaire, un entretien préalable peut être organisé entre le demandeur de l’aide spécifique et une assistante sociale de son Crous. Cet entretien doit permettre d’évaluer la situation globale de l’étudiant au regard notamment de son parcours universitaire et des difficultés qu’il rencontre. Après examen du dossier, la commission émet un avis d’attribution ou de non- attribution de l’aide spécifique et propose au directeur du Crous le montant de l’aide susceptible d’être accordée. Le directeur du Crous décide du montant de l’aide attribuée et notifie la décision à l’étudiant. Sa décision n’est pas susceptible de recours devant le recteur ou le ministre chargé de l’enseignement supérieur. En cas de changement d’académie postérieur à l’avis de la commission, la décision prise par cette dernière, s’impose au Crous de l’académie du lieu d’inscription de l’étudiant.`,
+        bullets: [],
+      },
+      {
+        id: 2,
+        title: "Prise de rendez-vous",
+        text: ``,
         bullets: [
-          "Crous de Paris : les prises de rendez-vous se font directement sur le site MesServicesEtudiant la rubrique « Prendre rendez-vous avec les Crous » et il faut choisir le service social et réserver un créneau pour un rendez-vous présentiel ou téléphonique.",
-          "Crous de Versailles : les prises de rendez-vous se font directement sur le site MesServicesEtudiant la rubrique « Prendre rendez-vous avec les Crous » et il faut choisir le service social et réserver un créneau pour un rendez-vous présentiel ou téléphonique.",
-          "Crous de Créteil : l’étudiant contacte directement l’accueil du service social pour demander une aide ou un rendez-vous via l’adresse social social@crous-creteil.fr.",
+          `Crous de Paris :
+          les prises de rendez-vous se font directement sur le site MesServicesEtudiant la rubrique « Prendre rendez-vous avec les Crous » et il faut choisir le service social et réserver un créneau pour un rendez-vous présentiel ou téléphonique.`,
+          `Crous de Créteil :
+          l’étudiant contacte directement l’accueil du service social pour demander une aide ou un rendez-vous via l’adresse social <span class="text-yellow-300">social@crous-creteil.fr</span>.`,
+          `Crous de Versailles :
+          les prises de rendez-vous se font directement sur le site MesServicesEtudiant la rubrique « Prendre rendez-vous avec les Crous » et il faut choisir le service social et réserver un créneau pour un rendez-vous présentiel ou téléphonique.`,
         ],
       },
     ],

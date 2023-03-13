@@ -63,8 +63,11 @@ export const links = [
             name: "Refus et suspension",
             link: "/bourse/paiement/refus-suspension",
           },
-          { name: "Révision", link: "/bourse/paiement/révision" },
-          { name: "Recours", link: "/bourse/paiement/recours" },
+          {
+            name: "Révision",
+            link: "bourse/paiement/révision/révision-détails",
+          },
+          { name: "Recours", link: "/bourse/paiement/recours/recours-détails" },
         ],
       },
       {

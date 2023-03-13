@@ -1,6 +1,6 @@
 const HhLogo = () => {
   return (
-    <footer className="p-4">
+    <footer className="fixed bottom-0 p-4">
       <div className="flex items-center justify-center gap-4">
         <div className="relative">
           <svg
@@ -135,7 +135,7 @@ const HhLogo = () => {
           </svg>
         </div>
 
-        <p className="text-md text-stone-200">
+        <p className="font-sans text-stone-200">
           Copyright © 2023 <br />
           All rights reserved
         </p>

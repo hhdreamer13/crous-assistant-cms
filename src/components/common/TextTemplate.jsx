@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import ScrollToTopButton from "./SccrollToTopButton";
 
 const TextTemplate = ({ content }) => {
   const navigate = useNavigate();
@@ -82,9 +83,11 @@ const TextTemplate = ({ content }) => {
                   {bullets &&
                     bullets.map((bullet, i) => {
                       return (
-                        <li className="whitespace-pre-line" key={i}>
-                          {bullet}
-                        </li>
+                        <li
+                          className="whitespace-pre-line"
+                          key={i}
+                          dangerouslySetInnerHTML={{ __html: bullet }}
+                        ></li>
                       );
                     })}
                 </ul>
@@ -93,6 +96,7 @@ const TextTemplate = ({ content }) => {
           })}
         </div>
       </div>
+      <ScrollToTopButton />
     </div>
   );
 };

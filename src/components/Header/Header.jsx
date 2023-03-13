@@ -5,7 +5,7 @@ const Header = () => {
     <nav className="sticky z-50 w-full">
       <ul className="flex items-center justify-center gap-8">
         <li>
-          <Link to="/" className="inline-block py-7 px-3">
+          <Link to="/" className="inline-block py-7 px-3 hover:text-slate-50">
             Accueil
           </Link>
         </li>

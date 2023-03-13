@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import ScrollToTopButton from "./SccrollToTopButton";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const TextTemplate = ({ content }) => {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ const TextTemplate = ({ content }) => {
   // Scroll to a section
   const handleMenuClick = (e) => {
     const position = document.getElementById(e.target.text);
-    console.log(e.target.text.toLowerCase(), position);
+
     position && position.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 

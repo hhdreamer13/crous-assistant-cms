@@ -11,7 +11,7 @@ const NavLinks = () => {
         <div key={i}>
           <div className="group px-3 text-left">
             <button
-              className="group flex items-center justify-between py-7 pr-0"
+              className="group flex items-center justify-between py-7 pr-0 group-hover:text-slate-50"
               onClick={() => setShow(false)}
               onMouseOut={() => setShow(true)}
               onBlur={() => setShow(true)}

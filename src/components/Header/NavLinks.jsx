@@ -8,7 +8,7 @@ const NavLinks = () => {
   return (
     <>
       {links.map((link, i) => (
-        <div key={i}>
+        <div key={i} className="hidden md:block">
           <div className="group px-3 text-left">
             <button
               className="group flex items-center justify-between py-7 pr-0 group-hover:text-slate-50"

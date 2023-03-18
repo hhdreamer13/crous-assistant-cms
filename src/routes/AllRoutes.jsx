@@ -22,6 +22,7 @@ import RévisionDetails from "../pages/Bourse/Paiement/BourseRévision/Révision
 import Recours from "../pages/Bourse/Paiement/Recours/Recours";
 import RecoursDetails from "../pages/Bourse/Paiement/Recours/RecoursDetails";
 import ComplémentairesDetails from "../pages/Bourse/Complémentaires/ComplémentairesDetails";
+import NotFound from "../pages/NotFound";
 
 const AllRoutes = () => {
   return (
@@ -82,6 +83,7 @@ const AllRoutes = () => {
           path="/services/bourse/aides-complementaires/:name"
           element={<ComplémentairesDetails />}
         />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </>
   );

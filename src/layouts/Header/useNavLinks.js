@@ -27,7 +27,6 @@ const useNavLinks = () => {
       }),
     };
   });
-  console.log("newLink", navLinks);
 
   return { navLinks, isLoading: false };
 };

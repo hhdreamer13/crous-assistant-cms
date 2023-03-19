@@ -1,4 +1,7 @@
 export default function slugify(str) {
+  if (typeof str !== "string") {
+    return "";
+  }
   return str
     .toLowerCase()
     .replace(/[\s]+/g, "-") // Replace spaces with hyphens

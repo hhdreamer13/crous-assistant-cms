@@ -48,16 +48,16 @@ const SelectionMenu = ({ items, location }) => {
           Sélectionner l&apos;option qui vous convient :
         </p>
         <ul>
-          {items.map(({ id, name }) => {
+          {items.map(({ _id, title }) => {
             return (
               <motion.li
-                key={id}
+                key={_id}
                 className="my-3 py-2"
                 whileHover={{ scale: 1.3, color: "#f87171", originX: 0 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Link to={`${url}/${slugify(name)}`}>
-                  <button className="">{name}</button>
+                <Link to={`${url}/${slugify(title)}`}>
+                  <button className="">{title}</button>
                 </Link>
               </motion.li>
             );

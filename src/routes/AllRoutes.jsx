@@ -3,12 +3,7 @@ import Header from "../layouts/Header/Header";
 import Services from "../pages/CrousServices/Services";
 import Home from "../pages/Home/Home";
 import ServicesDetails from "../pages/CrousServices/ServicesDetails";
-import BourseDetails from "../pages/Bourse/BourseDetails";
-import Nationalité from "../pages/Bourse/Constitution/Nationalité/Nationalité";
-import RessourcesParents from "../pages/Bourse/Instruction/Ressources/RessourcesParents";
-import RessourcesÉtudiant from "../pages/Bourse/Instruction/Ressources/RessourcesÉtudiant";
-import Révision from "../pages/Bourse/Paiement/BourseRévision/Révision";
-import Recours from "../pages/Bourse/Paiement/Recours/Recours";
+import PageCondition from "../pages/PageCondition";
 import NotFound from "../pages/NotFound";
 import PageDetails from "../pages/PageDetails";
 
@@ -17,7 +12,7 @@ const AllRoutes = () => {
     <>
       <Route path="/" element={<Header />}>
         <Route index element={<Home />} />
-        <Route path="/services" element={<Services />}>
+        <Route path="/services" element={<Services menu="menu" />}>
           <Route path=":service" element={<ServicesDetails />} />
         </Route>
         <Route
@@ -36,14 +31,13 @@ const AllRoutes = () => {
           path="/services/autre/:name"
           element={<PageDetails page="autre" />}
         />
-        <Route path="/services/bourse/:stages" element={<BourseDetails />} />
+
+        {/* Bourse Routes */}
         <Route
-          path="/services/bourse/constitution-du-dse/:name"
-          element={<PageDetails page="bourse" />}
-        />
-        <Route
-          path="/services/bourse/constitution-du-dse/conditions-de-nationalite"
-          element={<Nationalité />}
+          path="/services/bourse/conditions-de-nationalite"
+          element={
+            <PageCondition page="conditions-de-nationalite" menu="subMenu" />
+          }
         >
           <Route
             path=":name"
@@ -51,12 +45,10 @@ const AllRoutes = () => {
           />
         </Route>
         <Route
-          path="/services/bourse/instruction-du-dse/:name"
-          element={<PageDetails page="bourse" />}
-        />
-        <Route
-          path="/services/bourse/instruction-du-dse/justificatifs-de-ressources-parents"
-          element={<RessourcesParents />}
+          path="/services/bourse/justificatifs-de-ressources"
+          element={
+            <PageCondition page="justificatifs-de-ressources" menu="subMenu" />
+          }
         >
           <Route
             path=":name"
@@ -64,21 +56,12 @@ const AllRoutes = () => {
           />
         </Route>
         <Route
-          path="/services/bourse/instruction-du-dse/justificatifs-de-ressources-etudiant"
-          element={<RessourcesÉtudiant />}
-        >
-          <Route
-            path=":name"
-            element={<PageDetails page="bourse-ressource" />}
-          />
-        </Route>
-        <Route
-          path="/services/bourse/paiement-du-dse/:name"
+          path="/services/bourse/:name"
           element={<PageDetails page="bourse" />}
         />
         <Route
-          path="/services/bourse/paiement-du-dse/revision"
-          element={<Révision />}
+          path="/services/bourse/revision"
+          element={<PageCondition page="revision" menu="subMenu" />}
         >
           <Route
             path=":name"
@@ -86,15 +69,22 @@ const AllRoutes = () => {
           />
         </Route>
         <Route
-          path="/services/bourse/paiement-du-dse/recours"
-          element={<Recours />}
+          path="/services/bourse/recours"
+          element={<PageCondition page="recours" menu="subMenu" />}
         >
           <Route path=":name" element={<PageDetails page="bourse-recours" />} />
         </Route>
         <Route
-          path="/services/bourse/aides-complementaires/:name"
-          element={<PageDetails page="bourse-complementaire" />}
-        />
+          path="/services/bourse/aides-complementaires"
+          element={
+            <PageCondition page="aides-complementaires" menu="subMenu" />
+          }
+        >
+          <Route
+            path=":name"
+            element={<PageDetails page="bourse-complementaire" />}
+          />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </>

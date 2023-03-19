@@ -3,26 +3,14 @@ import Header from "../layouts/Header/Header";
 import Services from "../pages/CrousServices/Services";
 import Home from "../pages/Home/Home";
 import ServicesDetails from "../pages/CrousServices/ServicesDetails";
-import SocialDetails from "../pages/Social/SocialDetails";
-import LogementDetails from "../pages/Logement/LogementDetails";
-import CvecDetails from "../pages/Cvec/CvecDetails";
-import AutreDetails from "../pages/Autre/AutreDetails";
 import BourseDetails from "../pages/Bourse/BourseDetails";
-import ConstitutionDetails from "../pages/Bourse/Constitution/ConstitutionDetails";
 import Nationalité from "../pages/Bourse/Constitution/Nationalité/Nationalité";
-import NationalitéDetails from "../pages/Bourse/Constitution/Nationalité/NationalitéDetails";
-import InstructionDetails from "../pages/Bourse/Instruction/InstructionDetails";
 import RessourcesParents from "../pages/Bourse/Instruction/Ressources/RessourcesParents";
-import RessourcesParentsDetails from "../pages/Bourse/Instruction/Ressources/RessourcesParentsDetails";
 import RessourcesÉtudiant from "../pages/Bourse/Instruction/Ressources/RessourcesÉtudiant";
-import RessourcesÉtudiantDetails from "../pages/Bourse/Instruction/Ressources/RessourcesÉtudiantDetails";
-import PaiementDetails from "../pages/Bourse/Paiement/PaiementDetails";
 import Révision from "../pages/Bourse/Paiement/BourseRévision/Révision";
-import RévisionDetails from "../pages/Bourse/Paiement/BourseRévision/RévisionDetails";
 import Recours from "../pages/Bourse/Paiement/Recours/Recours";
-import RecoursDetails from "../pages/Bourse/Paiement/Recours/RecoursDetails";
-import ComplémentairesDetails from "../pages/Bourse/Complémentaires/ComplémentairesDetails";
 import NotFound from "../pages/NotFound";
+import PageDetails from "../pages/PageDetails";
 
 const AllRoutes = () => {
   return (
@@ -32,56 +20,80 @@ const AllRoutes = () => {
         <Route path="/services" element={<Services />}>
           <Route path=":service" element={<ServicesDetails />} />
         </Route>
-        <Route path="/services/social/:name" element={<SocialDetails />} />
-        <Route path="/services/logement/:name" element={<LogementDetails />} />
-        <Route path="/services/cvec/:name" element={<CvecDetails />} />
-        <Route path="/services/autre/:name" element={<AutreDetails />} />
+        <Route
+          path="/services/social/:name"
+          element={<PageDetails page="social" />}
+        />
+        <Route
+          path="/services/logement/:name"
+          element={<PageDetails page="logement" />}
+        />
+        <Route
+          path="/services/cvec/:name"
+          element={<PageDetails page="cvec" />}
+        />
+        <Route
+          path="/services/autre/:name"
+          element={<PageDetails page="autre" />}
+        />
         <Route path="/services/bourse/:stages" element={<BourseDetails />} />
         <Route
           path="/services/bourse/constitution-du-dse/:name"
-          element={<ConstitutionDetails />}
+          element={<PageDetails page="bourse" />}
         />
         <Route
           path="/services/bourse/constitution-du-dse/conditions-de-nationalite"
           element={<Nationalité />}
         >
-          <Route path=":name" element={<NationalitéDetails />} />
+          <Route
+            path=":name"
+            element={<PageDetails page="bourse-nationalite" />}
+          />
         </Route>
         <Route
           path="/services/bourse/instruction-du-dse/:name"
-          element={<InstructionDetails />}
+          element={<PageDetails page="bourse" />}
         />
         <Route
           path="/services/bourse/instruction-du-dse/justificatifs-de-ressources-parents"
           element={<RessourcesParents />}
         >
-          <Route path=":name" element={<RessourcesParentsDetails />} />
+          <Route
+            path=":name"
+            element={<PageDetails page="bourse-ressource" />}
+          />
         </Route>
         <Route
           path="/services/bourse/instruction-du-dse/justificatifs-de-ressources-etudiant"
           element={<RessourcesÉtudiant />}
         >
-          <Route path=":name" element={<RessourcesÉtudiantDetails />} />
+          <Route
+            path=":name"
+            element={<PageDetails page="bourse-ressource" />}
+          />
         </Route>
         <Route
           path="/services/bourse/paiement-du-dse/:name"
-          element={<PaiementDetails />}
+          element={<PageDetails page="bourse" />}
         />
         <Route
           path="/services/bourse/paiement-du-dse/revision"
           element={<Révision />}
         >
-          <Route path=":name" element={<RévisionDetails />} />
+          <Route
+            path=":name"
+            element={<PageDetails page="bourse-revision" />}
+          />
         </Route>
         <Route
           path="/services/bourse/paiement-du-dse/recours"
           element={<Recours />}
         >
-          <Route path=":name" element={<RecoursDetails />} />
+          <Route path=":name" element={<PageDetails page="bourse-recours" />} />
         </Route>
         <Route
           path="/services/bourse/aides-complementaires/:name"
-          element={<ComplémentairesDetails />}
+          element={<PageDetails page="bourse-complementaire" />}
         />
         <Route path="*" element={<NotFound />} />
       </Route>

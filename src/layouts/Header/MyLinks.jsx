@@ -9,15 +9,15 @@ export const links = [
         sublink: [
           {
             name: "Phases",
-            link: "/bourse/constitution/phases",
+            link: "/bourse/phases",
           },
           {
             name: "Critères",
-            link: "/bourse/constitution/critères",
+            link: "/bourse/critères",
           },
           {
             name: "Nationalité",
-            link: "/bourse/constitution/nationalité",
+            link: "/bourse/nationalité",
           },
         ],
       },

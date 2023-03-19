@@ -1,9 +1,23 @@
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import { PortableText } from "@portabletext/react";
 import ScrollToTopButton from "./ScrollToTopButton";
 
 const TextTemplate = ({ content }) => {
   const navigate = useNavigate();
+
+  const myPortableTextComponents = {
+    types: {
+      // Add custom components for different block types
+    },
+    marks: {
+      // Add custom components for different marks
+    },
+    block: {
+      // Customize block styles
+      normal: ({ children }) => <p className="text-justify">{children}</p>,
+    },
+  };
 
   // Scroll to a section
   const handleMenuClick = (e) => {
@@ -53,9 +67,9 @@ const TextTemplate = ({ content }) => {
         </motion.button>
         {content.paragraphs.some((item) => item.title) && (
           <div className="absolute -left-64 top-20 hidden w-56 rounded-2xl bg-slate-300 bg-opacity-25 xl:block">
-            {content.paragraphs.map(({ title, id }) => {
+            {content.paragraphs.map(({ title, _key }) => {
               return (
-                <ul key={id} className="text-sky-900">
+                <ul key={_key} className="text-sky-900">
                   {title && (
                     <li className="px-1">
                       <Link
@@ -74,23 +88,14 @@ const TextTemplate = ({ content }) => {
         )}
         <div className="flex flex-col">
           <h2 className="mt-0">{content.title}</h2>
-          {content.paragraphs.map(({ id, title, text, bullets }) => {
+          {content.paragraphs.map(({ _key, title, text }) => {
             return (
-              <div key={id}>
+              <div key={_key}>
                 <h3 id={title}>{title}</h3>
-                <p className="whitespace-pre-line text-justify">{text}</p>
-                <ul>
-                  {bullets &&
-                    bullets.map((bullet, i) => {
-                      return (
-                        <li
-                          className="whitespace-pre-line"
-                          key={i}
-                          dangerouslySetInnerHTML={{ __html: bullet }}
-                        ></li>
-                      );
-                    })}
-                </ul>
+                <PortableText
+                  value={text || []}
+                  components={myPortableTextComponents}
+                />
               </div>
             );
           })}

@@ -2,15 +2,13 @@ import { Link } from "react-router-dom";
 // import { links } from "./MyLinks";
 import { useState } from "react";
 import useNavLinks from "./useNavLinks";
-import Loader from "../../components/Loader";
 
 const NavLinks = () => {
   const [show, setShow] = useState(true);
   const { navLinks, isLoading } = useNavLinks();
   if (isLoading) {
-    return <Loader />;
+    return;
   }
-  console.log(navLinks);
 
   return (
     <>

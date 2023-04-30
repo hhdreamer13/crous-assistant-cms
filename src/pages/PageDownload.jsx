@@ -94,14 +94,16 @@ const PageDownload = () => {
           {data.map(({ _id, title, fileUrl, description }) => {
             return (
               <div key={_id}>
-                <h3 id={title}>{title}</h3>
+                <h3 className="text-black" id={title}>
+                  {title}
+                </h3>
                 <p>{description}</p>
                 <a
                   className="w-fit no-underline"
                   href={fileUrl}
                   download={title}
                 >
-                  <button className="btn rounded-md normal-case">
+                  <button className="btn rounded-md normal-case hover:bg-pink-200">
                     <svg
                       className="mr-2"
                       width="20px"

@@ -91,7 +91,9 @@ const TextTemplate = ({ content }) => {
           {content.paragraphs.map(({ _key, title, text }) => {
             return (
               <div key={_key}>
-                <h3 id={title}>{title}</h3>
+                <h3 className="text-black" id={title}>
+                  {title}
+                </h3>
                 <PortableText
                   value={text || []}
                   components={myPortableTextComponents}

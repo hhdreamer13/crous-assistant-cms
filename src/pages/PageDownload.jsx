@@ -16,6 +16,13 @@ const PageDownload = () => {
     position && position.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  const truncateTitle = (title, maxLength) => {
+    if (title.length > maxLength) {
+      return title.substring(0, maxLength) + "...";
+    }
+    return title;
+  };
+
   if (isLoading) {
     return <Loader />;
   }
@@ -83,7 +90,7 @@ const PageDownload = () => {
         )}
         {/* body of the page */}
         <div className="flex flex-col">
-          <h2 className="mt-0">Fichiers</h2>
+          <h2 className="mt-0">Fichierthèque</h2>
           {data.map(({ _id, title, fileUrl, description }) => {
             return (
               <div key={_id}>
@@ -111,7 +118,7 @@ const PageDownload = () => {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    {title}
+                    {truncateTitle(title, 20)}
                   </button>
                 </a>
               </div>

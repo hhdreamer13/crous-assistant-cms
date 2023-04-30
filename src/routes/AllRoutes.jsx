@@ -6,6 +6,7 @@ import ServicesDetails from "../pages/CrousServices/ServicesDetails";
 import PageCondition from "../pages/PageCondition";
 import NotFound from "../pages/NotFound";
 import PageDetails from "../pages/PageDetails";
+import PageDownload from "../pages/PageDownload";
 
 const AllRoutes = () => {
   return (
@@ -86,6 +87,7 @@ const AllRoutes = () => {
           />
         </Route>
         <Route path="*" element={<NotFound />} />
+        <Route path="/services/autre/fichiers" element={<PageDownload />} />
       </Route>
     </>
   );

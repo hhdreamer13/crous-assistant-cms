@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-  @apply min-h-screen bg-[linear-gradient(to_left_top,#0f2950,#005c8e,#00929e,#00c575,#a8eb12)];
+  @apply min-h-screen bg-[linear-gradient(to_left_top,#173056,#005c8e,#00929e,#00c575,#98CC25)];
 }
 
 h3,

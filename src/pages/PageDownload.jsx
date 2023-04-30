@@ -103,7 +103,7 @@ const PageDownload = () => {
                   href={fileUrl}
                   download={title}
                 >
-                  <button className="btn rounded-md normal-case hover:bg-pink-200">
+                  <button className="btn rounded-md normal-case hover:border-slate-300 hover:bg-slate-300 ">
                     <svg
                       className="mr-2"
                       width="20px"

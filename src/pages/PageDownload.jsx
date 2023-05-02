@@ -95,34 +95,52 @@ const PageDownload = () => {
             return (
               <div key={_id}>
                 <h3 className="text-black" id={title}>
+                  <a
+                    className="mr-4 no-underline"
+                    href={fileUrl}
+                    download={title}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button
+                      className="btn-secondary btn-sm btn-circle btn"
+                      title={`Télécharger "${truncateTitle(title, 20)}"`}
+                    >
+                      <motion.svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="17"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <motion.path
+                          initial={{ pathLength: 0 }}
+                          animate={{ pathLength: 1 }}
+                          transition={{ duration: 1 }}
+                          d="M20 15V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V15"
+                        />
+                        <motion.path
+                          initial={{ y: -20, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          transition={{ delay: 0.5 }}
+                          d="M12 3V15"
+                        />
+                        <motion.path
+                          initial={{ rotate: -45, scale: 0 }}
+                          animate={{ rotate: 0, scale: 1 }}
+                          transition={{ delay: 0.5 }}
+                          d="M8 11L12 15L16 11"
+                        />
+                      </motion.svg>
+                    </button>
+                  </a>
                   {title}
                 </h3>
                 <p>{description}</p>
-                <a
-                  className="w-fit no-underline"
-                  href={fileUrl}
-                  download={title}
-                >
-                  <button className="btn rounded-md normal-case hover:border-slate-300 hover:bg-slate-300 ">
-                    <svg
-                      className="mr-2"
-                      width="20px"
-                      height="20px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M20 15V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18L4 15M8 11L12 15M12 15L16 11M12 15V3"
-                        stroke="#020617"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                    {truncateTitle(title, 20)}
-                  </button>
-                </a>
               </div>
             );
           })}
